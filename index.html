@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content ="IE=edge">
+    <meta name="viewport" content ="width=device-width, initial-scale=1.0">
+    <title>Personal Website Kendall Smart</title>
+    <link rel="stylesheet" href ="styles.css">
+</head>
+<body> 
+  <div id="header">
+      <div class="container">
+        <nav>
+          <img src = "p6images/backgroundcolor.png" class="logo">
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#resume">Resume/Contact</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Northwestern University '25<br>BS in Computer Science</p>
+          <h1>Hello, My Name is <br><span>Kendall</span> Smart</h1>
+        </div>
+      </div>
+  </div>
+<!---------- about ---------->
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="p6images/user.png" width="300" height="600">
+      </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p>Hi, my name is Kendall and I am currently a sophomore studying Computer Science in McCormick School of Engineering and Applied Science at Northwestern University. I grew up in Denver, Colorado, and a fun fact is that I have 11 siblings (consisting of full, half, and step-siblings)! I currently work as a Peer Mentor for CS 111: Introduction to Programming, and I am eager to pursue my passion for CS through internship and program opportunitites available to me. </p>
+        
+        <div class="tab-titles">
+          <p class = "tab-links active-link" onclick="opentab('skills')">Skills & Interests</p>
+          <p class = "tab-links" onclick="opentab('experience')">Work Experience</p>
+          <p class = "tab-links" onclick="opentab('education')">Education</p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>Coding Languages</span><br>Java, Python, C, C++</li>
+            <li><span>Computer</span><br> Excel, MATLAB, Racket, Powerpoint, Microsoft 365</li>
+            <li><span>Relevant CS Courses</span><br>Data Structures, Intro to Computer Systems</li>
+            <li><span>Alpha Kappa Psi Business Fraternity</span><br>Member (since March 2021)</li>
+            <li><span>Northwestern Women's Club Lacrosse</span><br>Social Chair</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>September 2022 - Current</span><br>Peer Mentor for Northwestern Computer Science Department</li>
+            <li><span>Summer 2022</span><br>Finance Intern for Madison Industries</li>
+            <li><span>Summer 2021</span><br>Investment Analyst Intern at Blue Room Investing</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>2025</span><br>Expected Graduation BS from Northwestern University</li>
+            <li><span>2021</span><br>High School Diploma from Colorado Academy</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!---------- resume ---------->
+<div id="resume">
+  <div class ="container">
+    <h1 class="sub-title">Resume / Contact Info</h1>
+    <ul class="list_with_padding">
+      <li>Email me at <a href="mailto:kendallsmart2025@u.northwestern.edu" aria-label="My Email">KendallSmart2025@u.northwestern.edu</a></li>
+      <li>Find me on <a href="https://www.linkedin.com/in/kendall-smart" aria-label="My LinkedIn">LinkedIn</a></li>
+      <li><p>View my resume below:</p></li>
+    </ul>
+    <iframe src="Kendall_Smart_Resume.pdf" download="Kendall_Smart_Resume.pdf" width="80%" height="500px"></iframe>
+  
+  </div> 
+
+</div>
+
+<!---------- projects ---------->
+<div id="portfolio">
+  <div class="container">
+    <h1 class="sub-title">My Projects</h1>
+    <div class="work-list">
+      <div class="work"> 
+        <img src="p6images/brickout.png" width="100" height="500">
+        <div class="layer">
+          <h3>Brick Breaker</h3>
+          <p>This project is a brick breaker game coded in C. The user plays the game by launching the ball by hitting the space bar on their computer, and moves the bottom block around via the cursor in order to try and hit all of the blocks with the ball. </p>
+          
+        </div>
+      </div>
+      <div class="work"> 
+        <img src="p6images/pinball.jpeg" width="100" height="500">
+        <div class="layer">
+          <h3>Pinball</h3>
+          <p>This project is a Pinball game coded in C++. The user plays the game by launching the ball by hitting the space bar and the ball's speed and direction are affected depending on which of the objects it encounters as it travels down the middle of the screen.  </p>
+         
+        </div>
+      </div>
+      <div class="work"> 
+        <img src="p6images/clam.png" width="100" height="500">
+        <div class="layer">
+          <h3>C.L.A.M.</h3>
+          <p>This project was from my 10 week design course, where we created the C.L.A.M., a collapsible rain protector for our user who uses a wheelchair and has limited hand function.</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+  
+  function opentab(tabname){
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    } 
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }  
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
